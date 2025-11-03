@@ -79,23 +79,23 @@ AUTH_GITHUB_SECRET=
 
 
 ### ✅ Tasks checklist:
-- [ ] ​0. Getting Started (0/0 pts)
+- [X] ​0. Getting Started (0/0 pts)
 - [ ] ​1. Authentication / Layout (0/10 pts)
 - [ ] ​2. Home Page (0/30 pts)
 - [ ] ​3. Favorites Page (0/20 pts)
 - [ ] ​4. Watch Later Page (0/20 pts)
 - [ ] ​5. Latest Activity Feed (0/10 pts)
-- [ ] ​6. Deploy Application (0/10 pts)
+- [X] ​6. Deploy Application (10/10 pts)
 
 
-- [ ] **Everything Done ✓** (0/100 pts) - 0%
+- [ ] **Everything Done ✓** (10/100 pts) - 10%
 
 >### Progress Goals:
-><strong>Sunday: 10% (task 1)</strong>  
-<em style="color: gray">Monday: 25% (task 2)</em>  
-<em style="color: gray">Tuesday: 40% (task 2)</em>  
-<em style="color: gray">Wednesday: 60% (task 3)</em>
-<em style="color: gray">Thursday: 70-80% (task 4)</em>
+><strong>Sunday: 10% ✓(task 1)</strong>  
+<em style="color: gray">Monday: 20% (task 2)</em>  
+<em style="color: gray">Tuesday: 35% (task 2)</em>  
+<em style="color: gray">Wednesday: 50% (task 3)</em>
+<em style="color: gray">Thursday: 70% (task 4)</em>
 <em style="color: gray">Friday-Monday: 100% (task 6)</em>
 
 Completed: `N/A`
