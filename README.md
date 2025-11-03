@@ -80,7 +80,7 @@ AUTH_GITHUB_SECRET=
 
 ### ✅ Tasks checklist:
 - [X] ​0. Getting Started (0/0 pts)
-- [ ] ​1. Authentication / Layout (0/10 pts)
+- [ ] ​1. Authentication / Layout (1/10 pts)
 - [ ] ​2. Home Page (0/30 pts)
 - [ ] ​3. Favorites Page (0/20 pts)
 - [ ] ​4. Watch Later Page (0/20 pts)
@@ -88,7 +88,7 @@ AUTH_GITHUB_SECRET=
 - [X] ​6. Deploy Application (10/10 pts)
 
 
-- [ ] **Everything Done ✓** (10/100 pts) - 10%
+- [ ] **Everything Done ✓** (11/100 pts) - 11%
 
 >### Progress Goals:
 ><strong>Sunday: 10% ✓(task 1)</strong>  
