@@ -18,15 +18,14 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-    <body className="antialiased bg-blue text-offwhite min-h-screen flex flex-col">
-    <header className="flex items-center bg-neon-teal text-blue h-15 px-2">
+      <body className="antialiased bg-blue text-offwhite min-h-screen">
+        <header className="fixed top-0 left-0 right-0 z-50 flex items-center bg-neon-teal text-blue h-15 px-2">
       <Image src={Logo} alt="logo" height={24} width={24} />
       <h1 className="text-2xl font-bold">Cinema Guru</h1>
     </header>
 
-    <div className="flex flex-row flex-1">
-      <nav className="group sticky bg-teal text-white w-21 hover:w-56 px-2 flex flex-col pl-7.5 py-6 gap-6 overflow-auto">
-
+        <div className="flex flex-row pt-15 h-screen">
+          <nav className="fixed top-15 left-0 bottom-0 z-40 group bg-teal text-white w-21 hover:w-56 px-2 flex flex-col pl-7.5 py-6 gap-6 overflow-auto">
         <Link href="/" className="flex row gap-2 items-center">
           <Image src={Folder} alt={""} height={24} width={24} />
           <p className="text-sm hidden group-hover:block">Home</p>

@@ -4,7 +4,28 @@
     --color-neon-teal: #79f2d0;
     --color-teal:      #1ED2AF;
     --color-blue:      #00003c;
+    --color-dark-blue: #00002e;
     --color-red:       #d00414;
     --color-beige:     #f7f0dc;
     --color-offwhite:  #fef9e6;
+}
+
+@layer base {
+    /* For Firefox */
+    * {
+        scrollbar-color: var(--color-neon-teal) var(--color-dark-blue);
+    }
+
+    *::-webkit-scrollbar-track {
+        background: var(--color-dark-blue);
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--color-neon-teal);
+        border-radius: 0.25rem;
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+        background-color: var(--color-teal);
+    }
 }
