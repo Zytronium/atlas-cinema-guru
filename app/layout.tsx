@@ -31,7 +31,8 @@ export default async function RootLayout({ children }: Props) {
         <h1 className="text-2xl font-bold">Cinema Guru</h1>
       </a>
       <div className="flex row items-center gap-4 text-lg">
-        <p>Welcome, {session!.user!.email}</p>
+        <p className="hidden md:block">Welcome, {session && session.user? session.user.email : "user" }</p>
+
         <form
           className="flex row items-center gap-1"
           action={async () => {
@@ -45,9 +46,28 @@ export default async function RootLayout({ children }: Props) {
       </div>
     </header>
 
-    <div className="flex flex-row pt-15 h-screen">
+    {/* Mobile Nav */}
+    <nav className="md:hidden fixed top-15 left-0 right-0 z-40 bg-teal text-white flex flex-row justify-start gap-6 py-3 px-4">
+      <Link href="/" className="flex row items-center gap-1">
+        <Image src={Folder} alt={""} height={24} width={24} />
+        <p className="text-xs">Home</p>
+      </Link>
+
+      <Link href="/" className="flex row items-center gap-1">
+        <Image src={Star} alt={""} height={24} width={24} />
+        <p className="text-xs">Favorites</p>
+      </Link>
+
+      <Link href="/" className="flex row items-center gap-1">
+        <Image src={Clock} alt={""} height={24} width={24} />
+        <p className="text-xs">Watch Later</p>
+      </Link>
+    </nav>
+
+    {/* Desktop Nav */}
+    <div className="flex flex-row pt-15 md:pt-15 h-screen">
       <nav
-        className="fixed top-15 left-0 bottom-0 z-40 group bg-teal text-white w-21 hover:w-56 flex flex-col px-5 py-6 gap-6 ">
+        className="hidden md:flex fixed top-15 left-0 bottom-0 z-40 group bg-teal text-white w-21 hover:w-56 flex-col px-5 py-6 gap-6 ">
         <Link href="/" className="flex row ml-2.5 gap-2 items-center">
           <Image src={Folder} alt={""} height={24} width={24} />
           <p className="text-sm hidden group-hover:block">Home</p>
@@ -71,7 +91,7 @@ export default async function RootLayout({ children }: Props) {
           ))}
         </div>
       </nav>
-      <main className="flex flex-1 justify-center overflow-auto text-offwhite">
+      <main className="flex flex-1 justify-center overflow-auto text-offwhite pt-14 md:pt-0">
         {children}
       </main>
     </div>

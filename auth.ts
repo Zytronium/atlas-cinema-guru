@@ -10,6 +10,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [GitHub],
   callbacks: {
     authorized: async ({ auth }) => {
+      // return true; // uncomment for mobile testing on local ip instead of localhost
+
       // Logged in users are authenticated, otherwise redirect to login page
       return !!auth;
     },
