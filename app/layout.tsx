@@ -47,21 +47,29 @@ export default async function RootLayout({ children }: Props) {
 
     <div className="flex flex-row pt-15 h-screen">
       <nav
-        className="fixed top-15 left-0 bottom-0 z-40 group bg-teal text-white w-21 hover:w-56 px-2 flex flex-col pl-7.5 py-6 gap-6 overflow-auto">
-        <Link href="/" className="flex row gap-2 items-center">
+        className="fixed top-15 left-0 bottom-0 z-40 group bg-teal text-white w-21 hover:w-56 flex flex-col px-5 py-6 gap-6 ">
+        <Link href="/" className="flex row ml-2.5 gap-2 items-center">
           <Image src={Folder} alt={""} height={24} width={24} />
           <p className="text-sm hidden group-hover:block">Home</p>
         </Link>
 
-        <Link href="/" className="flex row gap-2 items-center">
+        <Link href="/" className="flex row ml-2.5 gap-2 items-center">
           <Image src={Star} alt={""} height={24} width={24} />
           <p className="text-sm hidden group-hover:block">Favorites</p>
         </Link>
 
-        <Link href="/" className="flex row gap-2 items-center">
+        <Link href="/" className="flex row ml-2.5 gap-2 items-center">
           <Image src={Clock} alt={""} height={24} width={24} />
           <p className="text-sm hidden group-hover:block">Watch Later</p>
         </Link>
+        <div className="flex-col gap-2 items-center self-center hidden group-hover:md:flex bg-neon-teal auto text-darker-blue w-full mx-auto overflow-auto no-scrollbar pt-4 rounded-2xl p-2">
+          <p className="font-bold text-lg">Latest Activities</p>
+          {Array.from({ length: 10 }).map((_, i) => (
+            <p key={i} className="text-lg">
+              This is dummy content line {i + 1}.
+            </p>
+          ))}
+        </div>
       </nav>
       <main className="flex flex-1 justify-center overflow-auto text-offwhite">
         {children}
