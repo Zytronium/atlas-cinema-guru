@@ -34,14 +34,14 @@ export default async function RootLayout({ children }: Props) {
         <p className="hidden md:block">Welcome, {session && session.user? session.user.email : "user" }</p>
 
         <form
-          className="flex row items-center gap-1"
+          className="flex row items-center gap-1 cursor-pointer"
           action={async () => {
             "use server"
-            await signOut()
+            await signOut();
           }}
         >
           <Image src={Logout} alt={""} height={16} width={16}/>
-          <button type="submit">Logout</button>
+          <button type="submit" className="cursor-pointer">Logout</button>
         </form>
       </div>
     </header>
