@@ -65,7 +65,7 @@ export default async function RootLayout({ children }: Props) {
     </nav>
 
     {/* Desktop Nav */}
-    <div className="flex flex-row pt-15 md:pt-15 h-screen">
+    <div className="flex flex-row pt-15 h-screen">
       <nav
         className="hidden md:flex fixed top-15 left-0 bottom-0 z-40 group bg-teal text-white w-21 hover:w-56 flex-col px-5 py-6 gap-6 ">
         <Link href="/" className="flex row ml-2.5 gap-2 items-center">
@@ -91,7 +91,7 @@ export default async function RootLayout({ children }: Props) {
           ))}
         </div>
       </nav>
-      <main className="flex flex-1 justify-center overflow-auto text-offwhite pt-14 md:pt-0">
+      <main className="flex-1 ml-21 pt-14 md:pt-0 justify-center overflow-auto text-offwhite ">
         {children}
       </main>
     </div>

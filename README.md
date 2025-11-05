@@ -81,24 +81,25 @@ AUTH_GITHUB_SECRET=
 ### ✅ Tasks checklist:
 - [X] ​0. Getting Started (0/0 pts)
 - [X] ​1. Authentication / Layout (10/10 pts)
-- [ ] ​2. Home Page (1/30 pts)
+- [ ] ​2. Home Page (8/30 pts)
 - [ ] ​3. Favorites Page (0/20 pts)
 - [ ] ​4. Watch Later Page (0/20 pts)
 - [ ] ​5. Latest Activity Feed (0/10 pts)
 - [X] ​6. Deploy Application (10/10 pts)
 
 
-- [ ] **Everything Done ✓** (21/100 pts) - 21%
+- [ ] **Everything Done ✓** (28/100 pts) - 28%
 
 >### Progress Goals:
 ><strong>Sunday: 10% ✓(task 0 & 6 only)</strong>  
 <strong>Monday: 20% ✓(task 1)</strong>  
-<strong>Tuesday: 30% (task 2)</strong>  
-<em style="color: gray">Wednesday: 40% (task 2)</em>
-<em style="color: gray">Thursday: 50% (task 2)</em>
-<em style="color: gray">Friday: 70% (task 3)</em>
-<em style="color: gray">Saturday-Sunday: 90% (task 4)</em>
-<em style="color: gray">Monday: 100% (task 6)</em>
+<strong>Tuesday: 25% (task 2)</strong>  
+<strong>Wednesday: 30% (task 2)</strong>
+<em style="color: gray">Thursday: 40% (task 2)</em>
+<em style="color: gray">Friday: 50% (task 2)</em>
+<em style="color: gray">Saturday-Sunday: 70% (task 3)</em>
+<em style="color: gray">Monday: 90% (task 4)</em>
+<em style="color: gray">Tuesday: 100% (task 6)</em>
 
 Completed: `N/A`
 
@@ -110,7 +111,7 @@ Completed: `N/A`
 
 
 - [x] 1 pt: Page is not accessible unless user is logged in.
-- [ ] 1 pt: movie widget component matches screenshots (including hover)
+- [X] 1 pt: movie widget component matches screenshots (including hover)
 - [ ] 1 pt: pagination buttons exist and match screenshots
 - [ ] 1 pt: Search and filters components exist and match screenshots
 - [ ] 1 pt: page layout matches screenshots on desktop
@@ -125,8 +126,8 @@ Completed: `N/A`
 
 **Movie Card Requirements:**
 
-- [ ] 3 pts: Hovering over a movie image should show the title, description, release year, and genre.
-- [ ] 3 pts: Hovering over a movie should show the favorite and watch later buttons.
+- [X] 3 pts: Hovering over a movie image should show the title, description, release year, and genre.
+- [X] 3 pts: Hovering over a movie should show the favorite and watch later buttons.
 - [ ] 3 pts: The star should reflect the current favorite state of the movie. It should be filled in if the movie is favorited or an outline if not favorited. Clicking the star button on a movie should remove the movie from a users favorite list.
 - [ ] 3 pts: The clock should reflect the current watch later state of the movie. It should be filled in if the movie is in the watch later list or an outline if not in the watch later list. Clicking the clock button on a movie should add or remove the movie from a users watch later list.
 
