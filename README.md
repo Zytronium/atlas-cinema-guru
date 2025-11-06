@@ -81,20 +81,20 @@ AUTH_GITHUB_SECRET=
 ### ✅ Tasks checklist:
 - [X] ​0. Getting Started (0/0 pts)
 - [X] ​1. Authentication / Layout (10/10 pts)
-- [ ] ​2. Home Page (8/30 pts)
+- [ ] ​2. Home Page (10/30 pts)
 - [ ] ​3. Favorites Page (0/20 pts)
 - [ ] ​4. Watch Later Page (0/20 pts)
 - [ ] ​5. Latest Activity Feed (0/10 pts)
 - [X] ​6. Deploy Application (10/10 pts)
 
 
-- [ ] **Everything Done ✓** (28/100 pts) - 28%
+- [ ] **Everything Done ✓** (30/100 pts) - 30%
 
 >### Progress Goals:
 ><strong>Sunday: 10% ✓(task 0 & 6 only)</strong>  
 <strong>Monday: 20% ✓(task 1)</strong>  
 <strong>Tuesday: 25% (task 2)</strong>  
-<strong>Wednesday: 30% (task 2)</strong>
+<strong>Wednesday: 30% ✓(task 2)</strong>
 <em style="color: gray">Thursday: 40% (task 2)</em>
 <em style="color: gray">Friday: 50% (task 2)</em>
 <em style="color: gray">Saturday-Sunday: 70% (task 3)</em>
@@ -112,9 +112,9 @@ Completed: `N/A`
 
 - [x] 1 pt: Page is not accessible unless user is logged in.
 - [X] 1 pt: movie widget component matches screenshots (including hover)
-- [ ] 1 pt: pagination buttons exist and match screenshots
+- [X] 1 pt: pagination buttons exist and match screenshots
 - [ ] 1 pt: Search and filters components exist and match screenshots
-- [ ] 1 pt: page layout matches screenshots on desktop
+- [X] 1 pt: page layout matches screenshots on desktop
 - [ ] 1 pt: page layout matches screenshots on mobile
 
 **Filters/Paging Requirements:**
