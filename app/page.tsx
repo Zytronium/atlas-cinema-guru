@@ -42,7 +42,6 @@ function MoviesGrid(props: { movies: Movie[] }) {
           />
         ))}
       </div>
-      <PaginationButtons />
     </>
   );
 }
@@ -50,6 +49,7 @@ function MoviesGrid(props: { movies: Movie[] }) {
 export default function Page() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
   const [filters, setFilters] = useState<Filters>({
     minYear: 1990,
     maxYear: 2025,
@@ -65,17 +65,22 @@ export default function Page() {
       minYear: filters.minYear.toString(),
       maxYear: filters.maxYear.toString()
     });
-
     if (filters.genres.length > 0) {
       params.append('genres', filters.genres.join(","));
     }
     if (filters.query.trim()) {
       params.append('query', filters.query);
     }
-
     const response = await fetch(`/api/titles?${params}`);
     const data = await response.json();
     setMovies(data.title); // note: API returns array `title` instead of `titles`
+
+    if (data.title.length < 6) {
+      setTotalPages(page);
+    } else {
+      setTotalPages(page + 1);
+    }
+
     setLoading(false);
   }
 
@@ -86,22 +91,11 @@ export default function Page() {
     <div className="flex flex-col gap-4 p-6">
       <SearchFilters />
       {loading ? <div>Loading...</div> : <MoviesGrid movies={movies}/>}
+      <PaginationButtons
+        currentPage={page}
+        totalPages={totalPages}
+        onPageChange={setPage}
+      />
     </div>
   );
-}
-
-function getNumberSuffix(n: number) {
-  switch (n % 10) {
-    case 1:
-      return n % 100 !== 11 ? "st" : "th";
-
-    case 2:
-      return n % 100 !== 12 ? "nd" : "th";
-
-    case 3:
-      return n % 100 !== 13 ? "rd" : "th";
-
-    default:
-      return "th";
-  }
 }

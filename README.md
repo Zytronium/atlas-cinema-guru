@@ -81,14 +81,14 @@ AUTH_GITHUB_SECRET=
 ### ✅ Tasks checklist:
 - [X] ​0. Getting Started (0/0 pts)
 - [X] ​1. Authentication / Layout (10/10 pts)
-- [ ] ​2. Home Page (12/30 pts)
+- [ ] ​2. Home Page (14/30 pts)
 - [ ] ​3. Favorites Page (0/20 pts)
 - [ ] ​4. Watch Later Page (0/20 pts)
 - [ ] ​5. Latest Activity Feed (0/10 pts)
 - [X] ​6. Deploy Application (10/10 pts)
 
 
-- [ ] **Everything Done ✓** (32/100 pts) - 32%
+- [ ] **Everything Done ✓** (34/100 pts) - 34%
 
 >### Progress Goals:
 ><strong>Sunday: 10% ✓(task 0 & 6 only)</strong>  
@@ -113,7 +113,7 @@ Completed: `N/A`
 - [x] 1 pt: Page is not accessible unless user is logged in.
 - [X] 1 pt: movie widget component matches screenshots (including hover)
 - [X] 1 pt: pagination buttons exist and match screenshots
-- [ ] 1 pt: Search and filters components exist and match screenshots
+- [X] 1 pt: Search and filters components exist and match screenshots
 - [X] 1 pt: page layout matches screenshots on desktop
 - [ ] 1 pt: page layout matches screenshots on mobile
 
@@ -122,7 +122,7 @@ Completed: `N/A`
 - [ ] 3 pts: Search field should filter movies by title. search should be case insensitive.
 - [ ] 3 pts: Min Year and Max Year fields should filter movies by release year
 - [ ] 3 pts: Genres should filter the movies by selected genres. Multiple genres can be selected at once. All selected genres should be shown.
-- [ ] 3 pts: Page should have pagination. Pressing previous or next should change the page.
+- [X] 3 pts: Page should have pagination. Pressing previous or next should change the page.
 
 **Movie Card Requirements:**
 
