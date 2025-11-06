@@ -53,12 +53,12 @@ export default async function RootLayout({ children }: Props) {
         <p className="text-xs">Home</p>
       </Link>
 
-      <Link href="/" className="flex row items-center gap-1">
+      <Link href="/favorites" className="flex row items-center gap-1">
         <Image src={Star} alt={""} height={24} width={24} />
         <p className="text-xs">Favorites</p>
       </Link>
 
-      <Link href="/" className="flex row items-center gap-1">
+      <Link href="/watch-later" className="flex row items-center gap-1">
         <Image src={Clock} alt={""} height={24} width={24} />
         <p className="text-xs">Watch Later</p>
       </Link>
@@ -73,12 +73,12 @@ export default async function RootLayout({ children }: Props) {
           <p className="text-sm hidden group-hover:block">Home</p>
         </Link>
 
-        <Link href="/" className="flex row ml-2.5 gap-2 items-center">
+        <Link href="/favorites" className="flex row ml-2.5 gap-2 items-center">
           <Image src={Star} alt={""} height={24} width={24} />
           <p className="text-sm hidden group-hover:block">Favorites</p>
         </Link>
 
-        <Link href="/" className="flex row ml-2.5 gap-2 items-center">
+        <Link href="/watch-later" className="flex row ml-2.5 gap-2 items-center">
           <Image src={Clock} alt={""} height={24} width={24} />
           <p className="text-sm hidden group-hover:block">Watch Later</p>
         </Link>
