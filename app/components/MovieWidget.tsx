@@ -15,9 +15,11 @@ interface MovieWidgetProps {
   genre:
     'Romance' | 'Horror'   | 'Drama'   | 'Action' | 'Mystery'  |
     'Fantasy' | 'Thriller' | 'Western' | 'Sci-Fi' | 'Adventure';
+  favorited: boolean;
+  watchLater: boolean;
 }
 
-export default function MovieWidget({ title, year, description, image, genre }: MovieWidgetProps) {
+export default function MovieWidget({ title, year, description, image, genre, favorited, watchLater }: MovieWidgetProps) {
   "use client";
   return (
     <div className="group relative bg-dark-blue rounded-2xl border-neon-teal border-2 overflow-hidden">
@@ -34,13 +36,13 @@ export default function MovieWidget({ title, year, description, image, genre }: 
           onClick={() => alert("Movie favorited")}
           className="cursor-pointer"
         >
-          <Image src={StarOutline} alt="Favorite" width={24} height={24} />
+          <Image src={favorited ? StarFilled : StarOutline } alt="Favorite" width={24} height={24} />
         </button>
         <button
           onClick={() => alert("Movie added to watch later")}
           className="cursor-pointer"
         >
-          <Image src={ClockOutline} alt="Watch Later" width={24} height={24} />
+          <Image src={watchLater ? ClockFilled : ClockOutline} alt="Watch Later" width={24} height={24} />
         </button>
       </div>
 
