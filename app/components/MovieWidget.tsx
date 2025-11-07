@@ -32,7 +32,7 @@ export default function MovieWidget({ title, year, description, image, genre, fa
         className="object-cover"
       />
 
-      <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100">
+      <div className="absolute top-4 right-4 flex gap-2 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-250">
         <button
           onClick={() => showToast("Movie favorited")}
           className="cursor-pointer"
@@ -47,7 +47,7 @@ export default function MovieWidget({ title, year, description, image, genre, fa
         </button>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 bg-blue text-offwhite p-4 opacity-0 group-hover:opacity-100">
+      <div className="absolute bottom-0 left-0 right-0 bg-blue text-offwhite p-4 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-250">
         <h2 className="text-xl">{title} ({year})</h2>
         <p className="text-md mt-1 mb-3">{description}</p>
         <span className="bg-teal text-white text-lg font-medium px-2 py-3 rounded-full">
