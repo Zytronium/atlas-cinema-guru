@@ -1,17 +1,33 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-export function SearchBar() {
+interface SearchBarProps {
+  onSearch: (query: string) => void;
+}
+
+export function SearchBar({ onSearch }: SearchBarProps) {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      onSearch(searchTerm);
+    }, 300); // Debounce by 300ms
+
+    return () => clearTimeout(timeoutId);
+  }, [searchTerm, onSearch]);
+
   return (
     <div className="flex flex-col space-y-2">
       <label htmlFor="search">Search</label>
       <input
         id="search"
         placeholder="Search Movies..."
-        className="rounded-full p-2 min-w-96 bg-blue border-teal border-2"
+        className="rounded-full p-2 min-w-112 bg-blue border-teal border-2"
         type="text"
         name="search"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
       />
     </div>
   );
@@ -74,11 +90,15 @@ export function GenreFilter() {
   );
 }
 
-export function SearchFilters() {
+export function SearchFilters({ onFiltersChange }: { onFiltersChange: (filters: Partial<Filters>) => void }) {
+  const handleSearch = useCallback((query: string) => {
+    onFiltersChange({ query });
+  }, [onFiltersChange]);
+
   return (
-    <div className="flex text-lg items-center justify-between h-full px-16 pr-24">
+    <div className="flex text-lg items-center justify-between h-full px-16 pr-24 py-4">
       <div className="flex flex-col items-start space-y-4">
-        <SearchBar />
+        <SearchBar onSearch={handleSearch} />
         <YearFilters />
       </div>
       <GenreFilter />

@@ -1,9 +1,8 @@
 "use client";
 import MovieWidget from "@/app/components/MovieWidget";
-import Placeholder from "@/assets/placeholder.svg";
 import PaginationButtons from "@/app/components/PaginationButtons";
 import { SearchFilters } from "@/app/components/SearchFilters";
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { Movie, Filters } from "@/lib/definitions";
 
 function MoviesGrid(props: { movies: Movie[] }) {
@@ -40,6 +39,11 @@ export default function Page() {
   });
   const [loading, setLoading] = useState(false);
 
+  const handleFiltersChange = useCallback((newFilters: Partial<Filters>) => {
+    setFilters(prev => ({ ...prev, ...newFilters }));
+    setPage(1);
+  }, []);
+
   async function fetchMovies() {
     setLoading(true);
     const params = new URLSearchParams({
@@ -73,7 +77,7 @@ export default function Page() {
   }, [page, filters]);
   return (
     <div className="flex flex-col gap-4 p-6">
-      <SearchFilters />
+      <SearchFilters onFiltersChange={handleFiltersChange} />
       {loading ? <div>Loading...</div> : <MoviesGrid movies={movies}/>}
       <PaginationButtons
         currentPage={page}
