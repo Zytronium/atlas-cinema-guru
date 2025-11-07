@@ -1,21 +1,23 @@
 ## Atlas Cinema Guru
 
-This is the Atlas Cinema Guru project. It contains the
-starting code for the movie database application.
+This is the Atlas Cinema Guru project. It's the final project for the last
+trimester at Atlas School. This is a movie database application. It allows
+users to search for movies, add movies to their favorite list, and add movies
+to their watch later list. All movies in the database are AI generated and are
+not real, nor can they be watched.
 
+Final product goal:  
 ![](./images/task-2-a.png)
 
 ### Getting Started
-
 - Run `npm install` to install dependencies
 - Run `npm run dev` to start the dev server
 - Open http://localhost:3000 in a browser
 
 ### API Routes
 
-If you would like to use client rendered components, you will need to utilize
-these API endpoints:
-
+When using client rendered components, the application needs to use
+the follwing API endpoints:  
 - `GET /api/titles?page=1&minYear=2024&maxYear=2025&genres=Sci-Fi,Mystery`
   returns list of movies. Support pagination, filtering by min year, max year,
   and genres
@@ -32,11 +34,11 @@ these API endpoints:
 
 The code for these apis can be found in the [app/api](./app/api/) directory.
 
-You can opt not to use the API and instead use server-rendered components
-utilizing the data fetchers defined in [lib/data.ts](./lib/data.ts).
+If the application were to avoid using the API and instead use
+server-rendered components, it can use the data fetchers defined
+in [lib/data.ts](./lib/data.ts).
 
 ### Database Setup
-
 The application expects a postgres database to store data. You will need to
 create a postgres database in vercel and populate the following env variables:
 
@@ -59,7 +61,6 @@ Helper methods for interacting with the database are already implemented
 in [lib/data.ts](./lib/data.ts)
 
 ### Authentication
-
 The
 application expects [Auth.js](https://authjs.dev/) to be configured for the
 application to authenticate and authorize users. Authentication is configured
@@ -77,18 +78,17 @@ AUTH_GITHUB_SECRET=
 
 ---
 
-
 ### ✅ Tasks checklist:
 - [X] ​0. Getting Started (0/0 pts)
 - [X] ​1. Authentication / Layout (10/10 pts)
-- [ ] ​2. Home Page (14/30 pts)
+- [ ] ​2. Home Page (18/30 pts)
 - [ ] ​3. Favorites Page (0/20 pts)
 - [ ] ​4. Watch Later Page (0/20 pts)
 - [ ] ​5. Latest Activity Feed (0/10 pts)
 - [X] ​6. Deploy Application (10/10 pts)
 
 
-- [ ] **Everything Done ✓** (34/100 pts) - 34%
+- [ ] **Everything Done ✓** (38/100 pts) - 38%
 
 >### Progress Goals:
 ><strong>Sunday: 10% ✓(task 0 & 6 only)</strong>  
@@ -128,7 +128,7 @@ Completed: `N/A`
 
 - [X] 3 pts: Hovering over a movie image should show the title, description, release year, and genre.
 - [X] 3 pts: Hovering over a movie should show the favorite and watch later buttons.
-- [ ] 1/3 pts: The star should reflect the current favorite state of the movie. It should be filled in if the movie is favorited or an outline if not favorited. Clicking the star button on a movie should remove the movie from a users favorite list.
-- [ ] 1/3 pts: The clock should reflect the current watch later state of the movie. It should be filled in if the movie is in the watch later list or an outline if not in the watch later list. Clicking the clock button on a movie should add or remove the movie from a users watch later list.
+- [X] 3 pts: The star should reflect the current favorite state of the movie. It should be filled in if the movie is favorited or an outline if not favorited. Clicking the star button on a movie should remove the movie from a users favorite list.
+- [X] 3 pts: The clock should reflect the current watch later state of the movie. It should be filled in if the movie is in the watch later list or an outline if not in the watch later list. Clicking the clock button on a movie should add or remove the movie from a users watch later list.
 
 ---

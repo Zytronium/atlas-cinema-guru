@@ -4,26 +4,7 @@ import Placeholder from "@/assets/placeholder.svg";
 import PaginationButtons from "@/app/components/PaginationButtons";
 import { SearchFilters } from "@/app/components/SearchFilters";
 import { useState, useEffect } from "react"
-
-interface Movie {
-  id: string;
-  title: string;
-  synopsis: string;
-  released: number;
-  genre:
-    'Romance' | 'Horror'   | 'Drama'   | 'Action' | 'Mystery'  |
-    'Fantasy' | 'Thriller' | 'Western' | 'Sci-Fi' | 'Adventure';
-  favorited: boolean;
-  watchLater: boolean;
-  image: string;
-}
-
-interface Filters {
-  minYear: number;
-  maxYear: number;
-  genres: string[];
-  query: string;
-}
+import { Movie, Filters } from "@/lib/definitions";
 
 function MoviesGrid(props: { movies: Movie[] }) {
   return (
@@ -32,6 +13,7 @@ function MoviesGrid(props: { movies: Movie[] }) {
         {props.movies.map((movie, i) => (
           <MovieWidget
             key={i}
+            id={movie.id}
             title={movie.title}
             year={movie.released}
             description={movie.synopsis}
@@ -65,12 +47,14 @@ export default function Page() {
       minYear: filters.minYear.toString(),
       maxYear: filters.maxYear.toString()
     });
+
     if (filters.genres.length > 0) {
       params.append('genres', filters.genres.join(","));
     }
     if (filters.query.trim()) {
       params.append('query', filters.query);
     }
+
     const response = await fetch(`/api/titles?${params}`);
     const data = await response.json();
     setMovies(data.title); // note: API returns array `title` instead of `titles`

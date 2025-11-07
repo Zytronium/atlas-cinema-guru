@@ -33,3 +33,23 @@ export type UsersTitle = Title & {
   favorited: boolean;
   watchLater: boolean;
 };
+
+export interface Movie {
+  id: string;
+  title: string;
+  synopsis: string;
+  released: number;
+  genre:
+    'Romance' | 'Horror'   | 'Drama'   | 'Action' | 'Mystery'  |
+    'Fantasy' | 'Thriller' | 'Western' | 'Sci-Fi' | 'Adventure';
+  favorited: boolean;
+  watchLater: boolean;
+  image: string;
+}
+
+export interface Filters {
+  minYear: number;
+  maxYear: number;
+  genres: string[];
+  query: string;
+}
