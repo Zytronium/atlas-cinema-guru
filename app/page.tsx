@@ -8,7 +8,7 @@ import { Movie, Filters } from "@/lib/definitions";
 function MoviesGrid(props: { movies: Movie[] }) {
   return (
     <>
-      <div className="pb-2 flex row flex-wrap gap-4 justify-between mx-10">
+      <div className="pb-2 flex row flex-wrap gap-4 justify-between mx-4 md:mx-10">
         {props.movies.map((movie, i) => (
           <MovieWidget
             key={i}
@@ -76,7 +76,7 @@ export default function Page() {
     fetchMovies();
   }, [page, filters]);
   return (
-    <div className="flex flex-col gap-4 p-6">
+    <div className="flex flex-col gap-4 py-6">
       <SearchFilters onFiltersChange={handleFiltersChange} />
       {loading ? <div>Loading...</div> : <MoviesGrid movies={movies}/>}
       <PaginationButtons
