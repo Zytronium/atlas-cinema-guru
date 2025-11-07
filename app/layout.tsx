@@ -91,7 +91,7 @@ export default async function RootLayout({ children }: Props) {
           ))}
         </div>
       </nav>
-      <main className="flex-1 ml-21 pt-14 md:pt-0 justify-center overflow-auto text-offwhite ">
+      <main className="flex-1 ml-0 md:ml-21 pt-14 md:pt-0 justify-center overflow-auto text-offwhite ">
         {children}
       </main>
     </div>

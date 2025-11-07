@@ -96,7 +96,7 @@ AUTH_GITHUB_SECRET=
 <strong>Tuesday: 25% (task 2)</strong>  
 <strong>Wednesday: 30% ✓(task 2)</strong>  
 <strong>Thursday: 40% (task 2)</strong>  
-<em style="color: gray">Friday: 50% (task 2)</em>  
+<strong>Friday: 50% (task 2)</strong>  
 <em style="color: gray">Saturday-Sunday: 70% (task 3)</em>  
 <em style="color: gray">Monday: 90% (task 4)</em>  
 <em style="color: gray">Tuesday: 100% (task 6)</em>  

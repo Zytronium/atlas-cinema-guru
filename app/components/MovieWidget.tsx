@@ -6,6 +6,7 @@ import StarOutline from "@/assets/star_outline.svg";
 import StarFilled from "@/assets/star_filled.svg";
 import ClockOutline from "@/assets/clock_outline.svg"
 import ClockFilled from "@/assets/clock_filled.svg";
+import showToast from "@/lib/toast";
 
 interface MovieWidgetProps {
   title: string;
@@ -33,13 +34,13 @@ export default function MovieWidget({ title, year, description, image, genre, fa
 
       <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100">
         <button
-          onClick={() => alert("Movie favorited")}
+          onClick={() => showToast("Movie favorited")}
           className="cursor-pointer"
         >
           <Image src={favorited ? StarFilled : StarOutline } alt="Favorite" width={24} height={24} />
         </button>
         <button
-          onClick={() => alert("Movie added to watch later")}
+          onClick={() => showToast("Movie added to watch later")}
           className="cursor-pointer"
         >
           <Image src={watchLater ? ClockFilled : ClockOutline} alt="Watch Later" width={24} height={24} />
