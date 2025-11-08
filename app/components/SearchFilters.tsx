@@ -1,9 +1,14 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { Filters } from "@/lib/definitions";
 
 interface SearchBarProps {
   onSearch: (query: string) => void;
+}
+
+interface YearFiltersProps {
+  onYearChange: (minYear: number, maxYear: number) => void;
 }
 
 export function SearchBar({ onSearch }: SearchBarProps) {
@@ -33,7 +38,18 @@ export function SearchBar({ onSearch }: SearchBarProps) {
   );
 }
 
-export function YearFilters() {
+export function YearFilters({ onYearChange }: YearFiltersProps) {
+  const [minYear, setMinYear] = useState(1990);
+  const [maxYear, setMaxYear] = useState(2025);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      onYearChange(minYear, maxYear);
+    }, 300);
+
+    return () => clearTimeout(timeoutId);
+  }, [minYear, maxYear, onYearChange]);
+
   return (
     <div className="flex space-x-4 w-full">
       <div className="flex flex-col space-y-2 flex-1">
@@ -42,7 +58,8 @@ export function YearFilters() {
           id="minYear"
           className="rounded-full p-2 w-full bg-blue border-teal border-2"
           type="number"
-          defaultValue="1990"
+          value={minYear}
+          onChange={(e) => setMinYear(Number(e.target.value))}
           name="minYear"
         />
       </div>
@@ -52,7 +69,8 @@ export function YearFilters() {
           id="maxYear"
           className="rounded-full p-2 w-full bg-blue border-teal border-2"
           type="number"
-          defaultValue="2025"
+          value={maxYear}
+          onChange={(e) => setMaxYear(Number(e.target.value))}
           name="maxYear"
         />
       </div>
@@ -97,12 +115,16 @@ export function SearchFilters({ onFiltersChange }: {
     onFiltersChange({ query });
   }, [onFiltersChange]);
 
+  const handleYearChange = useCallback((minYear: number, maxYear: number) => {
+    onFiltersChange({ minYear, maxYear });
+  }, [onFiltersChange]);
+
   return (
     <div
       className="flex flex-col text-lg items-start gap-6 px-4 md:px-16 md:pr-24 py-4 md:flex-row md:items-center md:justify-between">
       <div className="flex flex-col items-start space-y-4 w-full md:w-auto">
         <SearchBar onSearch={handleSearch} />
-        <YearFilters />
+        <YearFilters onYearChange={handleYearChange} />
       </div>
       <GenreFilter />
     </div>

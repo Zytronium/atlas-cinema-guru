@@ -49,7 +49,7 @@ export default function Page() {
     const params = new URLSearchParams({
       page: page.toString(),
       minYear: filters.minYear.toString(),
-      maxYear: filters.maxYear.toString()
+      maxYear: filters.maxYear.toString(),
     });
 
     if (filters.genres.length > 0) {

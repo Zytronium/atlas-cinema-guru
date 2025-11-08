@@ -81,14 +81,14 @@ AUTH_GITHUB_SECRET=
 ### ✅ Tasks checklist:
 - [X] ​0. Getting Started (0/0 pts)
 - [X] ​1. Authentication / Layout (10/10 pts)
-- [ ] ​2. Home Page (24/30 pts)
+- [ ] ​2. Home Page (27/30 pts)
 - [ ] ​3. Favorites Page (0/20 pts)
 - [ ] ​4. Watch Later Page (0/20 pts)
 - [ ] ​5. Latest Activity Feed (0/10 pts)
 - [X] ​6. Deploy Application (10/10 pts)
 
 
-- [ ] **Everything Done ✓** (44/100 pts) - 44%
+- [ ] **Everything Done ✓** (47/100 pts) - 47%
 
 >### Progress Goals:
 ><strong>Sunday: 10% ✓(task 0 & 6 only)</strong>  
@@ -97,7 +97,7 @@ AUTH_GITHUB_SECRET=
 <strong>Wednesday: 30% ✓(task 2)</strong>  
 <strong>Thursday: 40% (task 2)</strong>  
 <strong>Friday: 50% (task 2)</strong>  
-<em style="color: gray">Saturday-Sunday: 70% (task 3)</em>  
+<strong>Saturday-Sunday: 70% (task 3)</strong>  
 <em style="color: gray">Monday: 90% (task 4)</em>  
 <em style="color: gray">Tuesday: 100% (task 6)</em>  
 
@@ -120,7 +120,7 @@ Completed: `N/A`
 **Filters/Paging Requirements:**
 
 - [X] 3 pts: Search field should filter movies by title. search should be case insensitive.
-- [ ] 3 pts: Min Year and Max Year fields should filter movies by release year
+- [X] 3 pts: Min Year and Max Year fields should filter movies by release year
 - [ ] 3 pts: Genres should filter the movies by selected genres. Multiple genres can be selected at once. All selected genres should be shown.
 - [X] 3 pts: Page should have pagination. Pressing previous or next should change the page.
 
