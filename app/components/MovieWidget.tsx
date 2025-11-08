@@ -118,6 +118,7 @@ export default function MovieWidget({ id, title, year, description, image, genre
         }
 
         setIsWatchLater(false);
+        window.dispatchEvent(new Event('watchLaterChanged'));
         showToast("Movie removed from watch later");
       } catch (error) {
         console.error('Error submitting data:', error);
