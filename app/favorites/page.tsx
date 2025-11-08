@@ -65,8 +65,8 @@ export default function Page() {
 
   return (
     <div className="flex flex-col gap-4 py-6">
-      <SearchFilters onFiltersChange={handleFiltersChange} />
-      {loading ? <div>Loading...</div> : <MoviesGrid movies={movies} />}
+      <h1 className="text-5xl font-bold text-center py-2">Favorites</h1>
+      {loading ? <div className="text-center">Loading...</div> : <MoviesGrid movies={movies} />}
       <PaginationButtons
         currentPage={page}
         totalPages={totalPages}
