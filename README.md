@@ -103,32 +103,4 @@ AUTH_GITHUB_SECRET=
 
 Completed: `N/A`
 
-
-### Task 2: Home Page:
-**General Requirements:**
-
-- URL: `/`
-
-
-- [x] 1 pt: Page is not accessible unless user is logged in.
-- [X] 1 pt: movie widget component matches screenshots (including hover)
-- [X] 1 pt: pagination buttons exist and match screenshots
-- [X] 1 pt: Search and filters components exist and match screenshots
-- [X] 1 pt: page layout matches screenshots on desktop
-- [X] 1 pt: page layout matches screenshots on mobile
-
-**Filters/Paging Requirements:**
-
-- [X] 3 pts: Search field should filter movies by title. search should be case insensitive.
-- [X] 3 pts: Min Year and Max Year fields should filter movies by release year
-- [X] 3 pts: Genres should filter the movies by selected genres. Multiple genres can be selected at once. All selected genres should be shown.
-- [X] 3 pts: Page should have pagination. Pressing previous or next should change the page.
-
-**Movie Card Requirements:**
-
-- [X] 3 pts: Hovering over a movie image should show the title, description, release year, and genre.
-- [X] 3 pts: Hovering over a movie should show the favorite and watch later buttons.
-- [X] 3 pts: The star should reflect the current favorite state of the movie. It should be filled in if the movie is favorited or an outline if not favorited. Clicking the star button on a movie should remove the movie from a users favorite list.
-- [X] 3 pts: The clock should reflect the current watch later state of the movie. It should be filled in if the movie is in the watch later list or an outline if not in the watch later list. Clicking the clock button on a movie should add or remove the movie from a users watch later list.
-
 ---
