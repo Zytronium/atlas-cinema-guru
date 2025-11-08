@@ -82,13 +82,13 @@ AUTH_GITHUB_SECRET=
 - [X] ​0. Getting Started (0/0 pts)
 - [X] ​1. Authentication / Layout (10/10 pts)
 - [X] ​2. Home Page (30/30 pts)
-- [ ] ​3. Favorites Page (15/20 pts)
+- [ ] ​3. Favorites Page (19/20 pts)
 - [ ] ​4. Watch Later Page (0/20 pts)
 - [ ] ​5. Latest Activity Feed (0/10 pts)
 - [X] ​6. Deploy Application (10/10 pts)
 
 
-- [ ] **Everything Done ✓** (65/100 pts) - 65%
+- [ ] **Everything Done ✓** (69/100 pts) - 69%
 
 >### Progress Goals:
 ><strong>Sunday: 10% ✓(task 0 & 6 only)</strong>  

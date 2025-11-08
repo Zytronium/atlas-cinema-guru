@@ -22,7 +22,7 @@ export default function Page() {
     setPage(1);
   }, []);
 
-  async function fetchMovies() {
+  const fetchMovies = useCallback(async () => {
     setLoading(true);
     const params = new URLSearchParams({
       page: page.toString(),
@@ -48,15 +48,25 @@ export default function Page() {
     }
 
     setLoading(false);
-  }
+  }, [page, filters]);
+
+  useEffect(() => {
+    const handleFavoriteChange = () => {
+      fetchMovies();
+    };
+
+    window.addEventListener('favoriteChanged', handleFavoriteChange);
+    return () => window.removeEventListener('favoriteChanged', handleFavoriteChange);
+  }, [fetchMovies]);
 
   useEffect(() => {
     fetchMovies();
   }, [page, filters]);
+
   return (
     <div className="flex flex-col gap-4 py-6">
       <SearchFilters onFiltersChange={handleFiltersChange} />
-      {loading ? <div>Loading...</div> : <MoviesGrid movies={movies}/>}
+      {loading ? <div>Loading...</div> : <MoviesGrid movies={movies} />}
       <PaginationButtons
         currentPage={page}
         totalPages={totalPages}

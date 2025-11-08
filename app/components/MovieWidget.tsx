@@ -77,6 +77,7 @@ export default function MovieWidget({ id, title, year, description, image, genre
         }
 
         setIsFavorited(false);
+        window.dispatchEvent(new Event('favoriteChanged'));
         showToast("Movie removed from favorites");
       } catch (error) {
         console.error('Error submitting data:', error);
