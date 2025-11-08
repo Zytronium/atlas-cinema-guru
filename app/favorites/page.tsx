@@ -37,11 +37,11 @@ export default function Page() {
       params.append('query', filters.query);
     }
 
-    const response = await fetch(`/api/titles?${params}`);
+    const response = await fetch(`/api/favorites?${params}`);
     const data = await response.json();
-    setMovies(data.title); // note: API returns array `title` instead of `titles`
+    setMovies(data.favorites);
 
-    if (data.title.length < 6) {
+    if (data.favorites.length < 6) {
       setTotalPages(page);
     } else {
       setTotalPages(page + 1);
