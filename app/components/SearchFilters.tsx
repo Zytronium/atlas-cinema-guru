@@ -11,6 +11,10 @@ interface YearFiltersProps {
   onYearChange: (minYear: number, maxYear: number) => void;
 }
 
+interface GenreFilterProps {
+  onGenresChange: (genres: string[]) => void;
+}
+
 export function SearchBar({ onSearch }: SearchBarProps) {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -78,8 +82,9 @@ export function YearFilters({ onYearChange }: YearFiltersProps) {
   );
 }
 
-export function GenreFilter() {
+export function GenreFilter({ onGenresChange }: GenreFilterProps) {
   const [genres, setGenres] = useState<string[]>([]);
+  const [selectedGenres, setSelectedGenres] = useState<string[]>([]);
 
   useEffect(() => {
     async function fetchGenres() {
@@ -91,6 +96,18 @@ export function GenreFilter() {
     fetchGenres();
   }, []);
 
+  useEffect(() => {
+    onGenresChange(selectedGenres);
+  }, [selectedGenres, onGenresChange]);
+
+  function toggleGenre(genre: string) {
+    setSelectedGenres(
+      prev => prev.includes(genre)
+        ? prev.filter(g => g !== genre)
+        : [...prev, genre]
+    );
+  }
+
   return (
     <div className="flex flex-col space-y-2 w-full md:w-auto">
       <label>Genres</label>
@@ -98,7 +115,12 @@ export function GenreFilter() {
         {genres.map((genre) => (
           <button
             key={genre}
-            className="border-teal bg-dark-blue border-2 rounded-full p-2 m-1"
+            onClick={() => toggleGenre(genre)}
+            className={`border-2 rounded-full p-2 m-1 ${
+              selectedGenres.includes(genre)
+                ? 'bg-teal text-blue border-teal'
+                : 'bg-dark-blue text-offwhite border-teal'
+            }`}
           >
             {genre}
           </button>
@@ -119,6 +141,10 @@ export function SearchFilters({ onFiltersChange }: {
     onFiltersChange({ minYear, maxYear });
   }, [onFiltersChange]);
 
+  const handleGenresChange = useCallback((genres: string[]) => {
+    onFiltersChange({ genres });
+  }, [onFiltersChange]);
+
   return (
     <div
       className="flex flex-col text-lg items-start gap-6 px-4 md:px-16 md:pr-24 py-4 md:flex-row md:items-center md:justify-between">
@@ -126,7 +152,7 @@ export function SearchFilters({ onFiltersChange }: {
         <SearchBar onSearch={handleSearch} />
         <YearFilters onYearChange={handleYearChange} />
       </div>
-      <GenreFilter />
+      <GenreFilter onGenresChange={handleGenresChange} />
     </div>
   );
 }
