@@ -3,7 +3,7 @@
 This is the Atlas Cinema Guru project. It's the final project for the last
 trimester at Atlas School. This is a movie database application. It allows
 users to search for movies, add movies to their favorite list, and add movies
-to their watch later list. All movies in the database are AI generated and are
+to their watch later list. All movies in the database are AI-generated and are
 not real, nor can they be watched.
 
 Final product goal:  
@@ -84,11 +84,11 @@ AUTH_GITHUB_SECRET=
 - [X] ​2. Home Page (30/30 pts)
 - [X] ​3. Favorites Page (20/20 pts)
 - [X] ​4. Watch Later Page (20/20 pts)
-- [ ] ​5. Latest Activity Feed (0/10 pts)
+- [X] ​5. Latest Activity Feed (10/10 pts)
 - [X] ​6. Deploy Application (10/10 pts)
 
 
-- [ ] **Everything Done ✓** (90/100 pts) - 90%
+- [X] **Everything Done ✓** (100/100 pts) - 100%
 
 >### Progress Goals:
 ><strong>Sunday: 10% ✓(task 0 & 6 only)</strong>  
@@ -98,9 +98,9 @@ AUTH_GITHUB_SECRET=
 <strong>Thursday: 40% (task 2)</strong>  
 <strong>Friday: 50% (task 2)</strong>  
 <strong>Saturday-Sunday: 70% ✓(task 3)</strong>  
-<em style="color: gray">Monday: 90% ✓(task 4)</em>  
-<em style="color: gray">Tuesday: 100% (task 6)</em>  
+<strong>Monday: 90% ✓(task 4)</strong>  
+<em style="color: gray">Tuesday: 100% ✓(task 6)</em>  
 
-Completed: soon
+Completed: Monday, November 10, 2025
 
 ---

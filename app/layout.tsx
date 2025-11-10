@@ -1,14 +1,11 @@
 import "@/app/globals.css";
 import { Metadata } from "next";
 import Logo from "@/assets/app_logo.svg";
-import Folder from "@/assets/folder_filled.svg";
-import Star from "@/assets/star_filled.svg";
-import Clock from "@/assets/clock_filled.svg";
 import Logout from "@/assets/logout.svg";
 import Image from "next/image";
-import Link from "next/link";
 import { auth } from "@/auth"
 import { signOut } from "@/auth"
+import Sidebar from "@/app/components/Sidebar";
 
 export const metadata: Metadata = {
   title: "Cinema Guru | Atlas School",
@@ -46,52 +43,9 @@ export default async function RootLayout({ children }: Props) {
       </div>
     </header>
 
-    {/* Mobile Nav */}
-    <nav className="md:hidden fixed top-15 left-0 right-0 z-40 bg-teal text-white flex flex-row justify-start gap-6 py-3 px-4">
-      <Link href="/" className="flex row items-center gap-1">
-        <Image src={Folder} alt={""} height={24} width={24} />
-        <p className="text-xs">Home</p>
-      </Link>
-
-      <Link href="/favorites" className="flex row items-center gap-1">
-        <Image src={Star} alt={""} height={24} width={24} />
-        <p className="text-xs">Favorites</p>
-      </Link>
-
-      <Link href="/watch-later" className="flex row items-center gap-1">
-        <Image src={Clock} alt={""} height={24} width={24} />
-        <p className="text-xs">Watch Later</p>
-      </Link>
-    </nav>
-
-    {/* Desktop Nav */}
     <div className="flex flex-row pt-15 h-screen">
-      <nav
-        className="hidden md:flex fixed top-15 left-0 bottom-0 z-40 group bg-teal text-white w-21 hover:w-56 flex-col px-5 py-6 gap-6 ">
-        <Link href="/" className="flex row ml-2.5 gap-2 items-center">
-          <Image src={Folder} alt={""} height={24} width={24} />
-          <p className="text-sm hidden group-hover:block">Home</p>
-        </Link>
-
-        <Link href="/favorites" className="flex row ml-2.5 gap-2 items-center">
-          <Image src={Star} alt={""} height={24} width={24} />
-          <p className="text-sm hidden group-hover:block">Favorites</p>
-        </Link>
-
-        <Link href="/watch-later" className="flex row ml-2.5 gap-2 items-center">
-          <Image src={Clock} alt={""} height={24} width={24} />
-          <p className="text-sm hidden group-hover:block">Watch Later</p>
-        </Link>
-        <div className="flex-col gap-2 items-center self-center hidden group-hover:md:flex bg-neon-teal auto text-darker-blue w-full mx-auto overflow-auto no-scrollbar pt-4 rounded-2xl p-2">
-          <p className="font-bold text-lg">Latest Activities</p>
-          {Array.from({ length: 10 }).map((_, i) => (
-            <p key={i} className="text-lg">
-              This is dummy content line {i + 1}.
-            </p>
-          ))}
-        </div>
-      </nav>
-      <main className="flex-1 ml-0 md:ml-21 pt-14 md:pt-0 justify-center overflow-auto text-offwhite ">
+    <Sidebar />
+      <main className="flex-1 ml-0 md:ml-21 pt-14 md:pt-0 justify-center overflow-auto text-offwhite">
         {children}
       </main>
     </div>
