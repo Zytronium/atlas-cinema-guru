@@ -101,6 +101,6 @@ AUTH_GITHUB_SECRET=
 <em style="color: gray">Monday: 90% ✓(task 4)</em>  
 <em style="color: gray">Tuesday: 100% (task 6)</em>  
 
-Completed: `N/A`
+Completed: soon
 
 ---
